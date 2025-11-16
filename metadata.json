@@ -1,0 +1,5 @@
+{
+  "name": "Site de Contabilidade Moderno",
+  "description": "Um site moderno e profissional para uma empresa de contabilidade, apresentando serviços, informações sobre a empresa e um formulário de contato. Construído com React, TypeScript e Tailwind CSS.",
+  "requestFramePermissions": []
+}
