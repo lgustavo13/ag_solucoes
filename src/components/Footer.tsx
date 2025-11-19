@@ -1,15 +1,21 @@
 import React from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
+  const socialLinks = [
+    { href: "/", icon: <Facebook size={20} /> },
+    { href: "/", icon: <Instagram size={20} /> },
+    { href: "/", icon: <Linkedin size={20} /> },
+  ];
+
+  const quickLinks = [
+    { href: "/", label: "Início" },
+    { href: "/sobre", label: "Sobre Nós" },
+    { href: "/servicos", label: "Nossos Serviços" },
+    { href: "/contato", label: "Fale Conosco" },
+  ];
+
   return (
     <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -24,15 +30,15 @@ const Footer: React.FC = () => {
               transparência e dedicação há mais de 20 anos.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="hover:text-emerald-400 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">
-                <Linkedin size={20} />
-              </a>
+              {socialLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  {link.icon}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -42,38 +48,16 @@ const Footer: React.FC = () => {
               Links Rápidos
             </h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-emerald-400 transition-colors text-sm"
-                >
-                  Início
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sobre"
-                  className="hover:text-emerald-400 transition-colors text-sm"
-                >
-                  Sobre Nós
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/servicos"
-                  className="hover:text-emerald-400 transition-colors text-sm"
-                >
-                  Nossos Serviços
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contato"
-                  className="hover:text-emerald-400 transition-colors text-sm"
-                >
-                  Fale Conosco
-                </Link>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-emerald-400 transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -81,23 +65,13 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="mt-1 text-emerald-500 shrink-0" />
-                <span className="text-sm">
-                  Av. Paulista, 1000 - Bela Vista
-                  <br />
-                  São Paulo - SP, 01310-100
-                </span>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-emerald-500 shrink-0" />
-                <span className="text-sm">(11) 99999-8888</span>
+                <span className="text-sm">(19) 99775-5755</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-emerald-500 shrink-0" />
-                <span className="text-sm">
-                  contato@contabilidadeconfianca.com.br
-                </span>
+                <span className="text-sm">contato@ag-solucoes.com.br</span>
               </li>
             </ul>
           </div>
@@ -105,8 +79,8 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} Contabilidade Confiança. Todos os
-            direitos reservados.
+            &copy; {new Date().getFullYear()} A. G. Soluções. Todos os direitos
+            reservados.
           </p>
         </div>
       </div>

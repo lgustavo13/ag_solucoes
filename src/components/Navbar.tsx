@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Menu, X, Calculator } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,12 +59,12 @@ const Navbar: React.FC = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <button
+            <Button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-slate-900 focus:outline-none p-2"
+              className="text-slate-600 hover:text-slate-900 bg-white hover:bg-white hover:cursor-pointer focus:outline-none p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </Button>
           </div>
         </div>
       </div>
