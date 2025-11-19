@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { Menu, X, Calculator } from "lucide-react";
+import { useState } from "react";
+import { Calculator } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+import { MenuHamburguer } from "./MenuHamburguer";
+import { MenuHamburguerContent } from "./MenuHamburguerContent";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -58,37 +59,17 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <Button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-slate-900 bg-white hover:bg-white hover:cursor-pointer focus:outline-none p-2"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
+          <MenuHamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${
-                  isActive(item.href)
-                    ? "bg-emerald-50 text-emerald-700"
-                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
+        <MenuHamburguerContent
+          navigation={navigation}
+          setIsOpen={setIsOpen}
+          isActive={isActive}
+        />
       )}
     </nav>
   );
