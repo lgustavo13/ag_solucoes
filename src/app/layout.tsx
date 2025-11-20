@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Navbar />
           <main className="grow pt-20">{children}</main>
           <Footer />
+          <ScrollToTopButton />
           {/* <Assistant /> */}
         </div>
       </body>
