@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Button } from "@/src/components/ui/button";
 
 const Contact: React.FC = () => {
   useEffect(() => {
@@ -17,7 +18,25 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+
+    const companyPhone = "5519997755755";
+
+    const text = `
+*Olá! Vim através do site e gostaria de um atendimento.*
+
+*Nome:* ${formState.name}
+*Email:* ${formState.email}
+*Telefone:* ${formState.phone}
+
+*Mensagem:*
+${formState.message}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${companyPhone}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(whatsappUrl, "_blank");
+
     setFormState({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -84,6 +103,10 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-8">
               Envie uma Mensagem
             </h2>
+            <p className="text-slate-500 mb-8 text-sm">
+              Preencha os dados abaixo para ser atendido via WhatsApp pelo nosso
+              time.
+            </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
@@ -161,13 +184,14 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              <button
+              <Button
+                size="lg"
                 type="submit"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-emerald-500/25 flex items-center justify-center gap-2"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-emerald-500/25 flex items-center justify-center gap-2 hover:cursor-pointer"
               >
-                <Send size={18} />
-                Enviar Mensagem
-              </button>
+                <MessageCircle size={20} />
+                Iniciar Conversa no WhatsApp
+              </Button>
             </form>
           </div>
         </div>
