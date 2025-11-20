@@ -60,7 +60,7 @@ const Home = () => {
               href="/contato"
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2 justify-center"
             >
-              Fale com um Especialista <ArrowRight size={20} />
+              Entre em contato <ArrowRight size={20} />
             </Link>
             <Link
               href="/servicos"
@@ -131,9 +131,9 @@ const Home = () => {
             <ul className="space-y-4">
               {[
                 "Admissão e rescisão de funcionários",
-                "Férias",
-                "E-social",
-                "Folha de Domesticos",
+                "Gestão de Férias",
+                "Elaboração e envio do eSocial",
+                "Assessorias para MEI",
               ].map((item, index) => (
                 <li
                   key={index}

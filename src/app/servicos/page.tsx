@@ -2,12 +2,14 @@
 
 import React, { useEffect } from "react";
 import {
-  FileText,
-  Briefcase,
-  Users,
-  BarChart3,
-  Landmark,
-  Stamp,
+  UserPlus,
+  Banknote,
+  Receipt,
+  Calendar,
+  Globe,
+  Home,
+  Store,
+  FileCheck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -18,75 +20,99 @@ const Services: React.FC = () => {
 
   const servicesList = [
     {
-      icon: <Briefcase size={32} />,
-      title: "Abertura e Legalização",
+      icon: <UserPlus size={32} />,
+      title: "Admissão e Rescisão",
       description:
-        "Processo completo de abertura, alteração e encerramento de empresas. Cuidamos de toda a burocracia junto aos órgãos públicos.",
+        "Gestão completa da entrada e saída de colaboradores, garantindo documentação correta e cálculos precisos para segurança jurídica",
       features: [
-        "Consulta de viabilidade",
-        "Contrato Social",
-        "Alvarás e Licenças",
-        "CNPJ e Inscrições",
+        "Contratos de Trabalho",
+        "Cálculo de Verbas Rescisórias",
+        "Registro no eSocial",
+        "Guias e Documentação",
       ],
     },
     {
-      icon: <FileText size={32} />,
-      title: "Contabilidade Fiscal",
+      icon: <Calendar size={32} />,
+      title: "Gestão de Férias",
       description:
-        "Escrituração fiscal completa, apuração de impostos e entrega de obrigações acessórias, garantindo conformidade tributária.",
+        "Controle rigoroso de períodos aquisitivos e concessivos, com cálculos exatos e programação de escalas para evitar multas.",
       features: [
-        "Apuração de ICMS, IPI, ISS",
-        "Simples Nacional, Lucro Presumido e Real",
-        "SPED Fiscal",
-        "Planejamento Tributário",
+        "Controle de Vencimentos",
+        "Cálculos e Emissão de Recibos",
+        "Gestão de Abono Pecuniário",
+        "Programação de Escalas",
       ],
     },
     {
-      icon: <Users size={32} />,
-      title: "Departamento Pessoal",
+      icon: <Globe size={32} />,
+      title: "Elaboração e Envio do eSocial",
       description:
-        "Gestão completa da folha de pagamento e rotinas trabalhistas, assegurando os direitos da empresa e dos colaboradores.",
+        "Monitoramento e transmissão de eventos periódicos, assegurando que sua empresa cumpra as exigências digitais do governo.",
       features: [
-        "Folha de Pagamento",
-        "Admissões e Rescisões",
-        "eSocial",
-        "Controle de Férias",
+        "Transmissão de Eventos (Periódicos e Não Periódicos)",
+        "Gestão de DCTFWeb",
+        "Monitoramento de SST (Saúde e Segurança do Trabalho)",
+        "Auditoria de Dados Cadastrais",
       ],
     },
     {
-      icon: <BarChart3 size={32} />,
-      title: "Consultoria Financeira",
+      icon: <Home size={32} />,
+      title: "Folha de Domésticos",
       description:
-        "Análise detalhada da saúde financeira do seu negócio para auxiliar na tomada de decisões estratégicas.",
+        "Assessoria especializada para empregadores domésticos, cuidando de toda a burocracia mensal e obrigações trabalhistas.",
       features: [
-        "Fluxo de Caixa",
-        "Balanços e Balancetes",
-        "Análise de Indicadores",
+        "Gestão Mensal do eSocial Doméstico",
+        "Cálculos Trabalhistas Complexos",
+        "Recibos de Pagamento (Holerites)",
+        "Férias e 13º Salário",
+      ],
+    },
+    {
+      icon: <Store size={32} />,
+      title: "Assessorias para MEI",
+      description:
+        "Suporte total para o Microempreendedor Individual crescer com segurança, mantendo o CNPJ regular e os impostos em dia.",
+      features: [
+        "Declaração Anual (DASN-SIMEI)",
+        "Controle do Limite de Faturamento",
+        "Emissão de Notas Fiscais",
+        "Regularização e Parcelamento",
+      ],
+    },
+    {
+      icon: <FileCheck size={32} />,
+      title: "Suporte em Obrigações Anuais (DIRF, RAIS, CAGED)",
+      description:
+        "Garantimos a conformidade total com a entrega rigorosa das declarações anuais, cruzando dados para evitar malha fina.",
+      features: [
+        "Elaboração e Envio da DIRF",
+        "Gestão de RAIS (e sua substituição)",
+        "Emissão de Informes de Rendimentos",
+        "Auditoria de Cruzamento de Dados",
+      ],
+    },
+    {
+      icon: <Banknote size={32} />,
+      title: "Fechamento de Folha",
+      description:
+        "Processamento rigoroso da remuneração, assegurando a exatidão dos pagamentos e o cumprimento dos prazos legais.",
+      features: [
+        "Cálculo de Proventos",
+        "Apuração de Horas Extras",
+        "Emissão de Holerites",
         "Relatórios Gerenciais",
       ],
     },
     {
-      icon: <Stamp size={32} />,
-      title: "Regularização de Pendências",
+      icon: <Receipt size={32} />,
+      title: "Geração de Guias",
       description:
-        "Levantamento de débitos e regularização de empresas inaptas ou com pendências na Receita Federal.",
+        "Gestão completa dos encargos trabalhistas, garantindo que sua empresa recolha os tributos corretamente (INSS, FGTS, IRRF).",
       features: [
-        "Parcelamentos",
-        "Certidões Negativas",
-        "Regularização de CPF/CNPJ",
-        "Baixa de Débitos",
-      ],
-    },
-    {
-      icon: <Landmark size={32} />,
-      title: "Imposto de Renda (PF)",
-      description:
-        "Assessoria especializada para declaração de imposto de renda pessoa física, evitando malha fina.",
-      features: [
-        "Declaração Anual",
-        "Carnê-Leão",
-        "Ganhos de Capital",
-        "Regularização de CPF",
+        "DARF Previdenciário",
+        "FGTS Digital",
+        "Retenção de IRRF",
+        "Controle de Vencimentos",
       ],
     },
   ];
