@@ -130,9 +130,9 @@ const Home = () => {
 
             <ul className="space-y-4">
               {[
-                "Admissão e rescisão de funcionários",
+                "Admissão e Rescisão",
                 "Gestão de Férias",
-                "Elaboração e envio do eSocial",
+                "Elaboração e Envio do eSocial",
                 "Assessorias para MEI",
               ].map((item, index) => (
                 <li
