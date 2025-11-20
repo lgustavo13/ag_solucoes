@@ -70,7 +70,7 @@ const About = () => {
           <div className="bg-slate-50 p-8 rounded-xl border-t-4 border-emerald-500 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Missão</h3>
             <p className="text-slate-600">
-              Prover soluções contábeis de excelência, facilitando a gestão
+              Terceirizamos a sua folha de pagamento, facilitando a gestão
               empresarial e contribuindo para o sucesso sustentável de nossos
               clientes.
             </p>

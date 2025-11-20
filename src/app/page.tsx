@@ -130,10 +130,10 @@ const Home = () => {
 
             <ul className="space-y-4">
               {[
-                "Abertura e Legalização de Empresas",
-                "Gestão Tributária e Fiscal",
-                "Departamento Pessoal e RH",
-                "Consultoria Financeira",
+                "Admissão e rescisão de funcionários",
+                "Férias",
+                "E-social",
+                "Folha de Domesticos",
               ].map((item, index) => (
                 <li
                   key={index}
