@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import Image from "next/image";
+import { Mail, Phone, Send } from "lucide-react";
 
 const Contact: React.FC = () => {
   useEffect(() => {
@@ -60,7 +59,7 @@ const Contact: React.FC = () => {
                     <p className="font-semibold text-slate-900">
                       Telefone / WhatsApp
                     </p>
-                    <p className="text-slate-600">(11) 99999-8888</p>
+                    <p className="text-slate-600">(19) 99775-5755</p>
                     <p className="text-slate-500 text-sm">
                       Seg-Sex: 08h às 18h
                     </p>
@@ -73,40 +72,9 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Email</p>
-                    <p className="text-slate-600">
-                      contato@contabilidadeconfianca.com.br
-                    </p>
+                    <p className="text-slate-600">contato@ag-solucoes.com.br</p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-full text-emerald-600">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900">Endereço</p>
-                    <p className="text-slate-600">
-                      Av. Paulista, 1000, Conj. 102
-                    </p>
-                    <p className="text-slate-600">Bela Vista - São Paulo, SP</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mock Map */}
-            <div className="bg-slate-200 w-full h-64 rounded-2xl overflow-hidden relative shadow-inner">
-              <Image
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000"
-                className="w-full h-full object-cover opacity-60"
-                alt="Mapa"
-                width={0}
-                height={0}
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="bg-white px-4 py-2 rounded-lg shadow text-sm font-semibold text-slate-700">
-                  Mapa da localização
-                </span>
               </div>
             </div>
           </div>

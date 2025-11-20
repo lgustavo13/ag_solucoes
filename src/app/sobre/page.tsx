@@ -1,13 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 
-const About: React.FC = () => {
-  useEffect(() => {
-    document.title = "Contabilidade Confiança | Sobre Nós";
-  }, []);
+export const metadata: Metadata = {
+  title: "Sobre Nós",
+};
 
+const About = () => {
   return (
     <div className="bg-white">
       {/* Header */}
@@ -15,8 +14,8 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-serif font-bold mb-4">Sobre Nós</h1>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Conheça a história por trás da Contabilidade Confiança e nossa
-            missão de transformar números em oportunidades.
+            Conheça a história por trás da A. G. Soluções e nossa missão de
+            transformar números em oportunidades.
           </p>
         </div>
       </div>
@@ -29,17 +28,12 @@ const About: React.FC = () => {
               Nossa História
             </h2>
             <p>
-              A <strong>Contabilidade Confiança</strong> nasceu de um sonho e
-              muita dedicação. Fundada há mais de 20 anos pela Contadora Maria
-              Silva (nome fictício para exemplo), a empresa começou em um
-              pequeno escritório no centro da cidade, com o objetivo de oferecer
-              um serviço contábil que fosse, acima de tudo, humano e acessível.
+              A <strong>A. G. Soluções</strong> nasceu de um sonho e muita
+              dedicação. Fundada pela Contadora Andrea Aleksandra Gonçalves, com
+              o objetivo de oferecer um serviço de terceirização de folha de
+              pagamento.
             </p>
-            <p>
-              Ao longo das décadas, crescemos junto com nossos clientes. Vimos
-              pequenas empresas se tornarem grandes corporações e ajudamos
-              famílias a organizarem seus patrimônios.
-            </p>
+            <p>Ao longo dos anos, crescemos junto com nossos clientes.</p>
             <p>
               Hoje, combinamos a tradição e a experiência de anos de mercado com
               as mais modernas ferramentas tecnológicas, garantindo agilidade
@@ -58,15 +52,15 @@ const About: React.FC = () => {
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
               alt="Fundadora"
               className="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8"
-              width={0}
-              height={0}
+              width={1000}
+              height={1000}
             />
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600"
               alt="Escritório Moderno"
               className="rounded-2xl shadow-lg w-full h-64 object-cover"
-              width={0}
-              height={0}
+              width={1000}
+              height={1000}
             />
           </div>
         </div>

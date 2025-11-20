@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Calculator size={24} />
               </div>
               <span className="font-bold text-xl text-slate-800 tracking-tight">
-                A G<span className="text-emerald-600"> Soluções</span>
+                A. G.<span className="text-emerald-600"> Soluções</span>
               </span>
             </Link>
           </div>

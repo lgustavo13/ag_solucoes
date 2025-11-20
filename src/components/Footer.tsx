@@ -23,11 +23,11 @@ const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="space-y-4">
             <h3 className="text-white text-lg font-bold font-serif">
-              Contabilidade Confiança
+              A. G. Soluções
             </h3>
             <p className="text-sm leading-relaxed text-slate-400">
               Cuidando da saúde financeira da sua empresa com ética,
-              transparência e dedicação há mais de 20 anos.
+              transparência e dedicação.
             </p>
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((link, index) => (

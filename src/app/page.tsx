@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect } from "react";
+import { Metadata } from "next";
 import {
   ArrowRight,
   CheckCircle2,
@@ -11,10 +9,37 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const Home: React.FC = () => {
-  useEffect(() => {
-    document.title = "Contabilidade Confiança | Início";
-  }, []);
+export const metadata: Metadata = {
+  title: "A G Soluções | Início",
+};
+
+const Home = () => {
+  const valueProps = [
+    {
+      title: "Segurança e Ética",
+      description:
+        "Garantimos total sigilo e conformidade com as legislações vigentes, protegendo o patrimônio da sua empresa.",
+      iconColor:
+        "bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-emerald-600",
+      icon: <Shield size={28} />,
+    },
+    {
+      title: "Foco em Resultados",
+      description:
+        "Não apenas entregamos guias de impostos, mas analisamos seus dados para sugerir melhorias financeiras.",
+      iconColor:
+        "bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-blue-600",
+      icon: <TrendingUp size={28} />,
+    },
+    {
+      title: "Atendimento Humanizado",
+      description:
+        'Uma equipe familiar e dedicada, pronta para ouvir suas demandas e explicar tudo sem "contabilês".',
+      iconColor:
+        "bg-purple-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-purple-600",
+      icon: <Users size={28} />,
+    },
+  ];
 
   return (
     <div className="w-full">
@@ -55,49 +80,25 @@ const Home: React.FC = () => {
               Nossos Diferenciais
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-2 font-serif">
-              Por que escolher a Contabilidade Confiança?
+              Por que escolher a A. G. Soluções?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-emerald-600">
-                <Shield size={28} />
+            {valueProps.map((valueProp, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className={valueProp.iconColor}>{valueProp.icon}</div>
+                <h3 className="text-xl font-bold text-slate-800 mb-3">
+                  {valueProp.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {valueProp.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">
-                Segurança e Ética
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Garantimos total sigilo e conformidade com as legislações
-                vigentes, protegendo o patrimônio da sua empresa.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-blue-600">
-                <TrendingUp size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">
-                Foco em Resultados
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Não apenas entregamos guias de impostos, mas analisamos seus
-                dados para sugerir melhorias financeiras.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-purple-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-purple-600">
-                <Users size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">
-                Atendimento Humanizado
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Uma equipe familiar e dedicada, pronta para ouvir suas demandas
-                e explicar tudo sem &quot;contabilês&quot;.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -111,9 +112,9 @@ const Home: React.FC = () => {
             <Image
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000"
               alt="Equipe trabalhando"
-              className="relative rounded-2xl shadow-2xl z-10"
-              width={0}
-              height={0}
+              className="relative rounded-2xl shadow-2xl z-10 w-full"
+              width={1000}
+              height={1000}
             />
           </div>
           <div className="lg:w-1/2">

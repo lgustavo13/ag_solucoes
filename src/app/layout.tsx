@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./globals.css";
@@ -9,8 +10,11 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-export const metadata = {
-  title: "Contabilidade Confiança",
+export const metadata: Metadata = {
+  title: {
+    default: "A G Soluções",
+    template: "A G Soluções | %s",
+  },
   description: "Website profissional de contabilidade",
 };
 
