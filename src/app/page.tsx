@@ -18,7 +18,7 @@ const Home = () => {
     {
       title: "Segurança e Ética",
       description:
-        "Garantimos total sigilo e conformidade com as legislações vigentes, protegendo o patrimônio da sua empresa.",
+        "Processos transparentes, sigilo absoluto e total conformidade com a legislação. Sua empresa sempre protegida.",
       iconColor:
         "bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-emerald-600",
       icon: <Shield size={28} />,
@@ -26,7 +26,7 @@ const Home = () => {
     {
       title: "Foco em Resultados",
       description:
-        "Não apenas entregamos guias de impostos, mas analisamos seus dados para sugerir melhorias financeiras.",
+        "Precisão, agilidade e redução de erros. Uma folha de pagamento eficiente que gera economia e confiança.",
       iconColor:
         "bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-blue-600",
       icon: <TrendingUp size={28} />,
@@ -34,7 +34,7 @@ const Home = () => {
     {
       title: "Atendimento Humanizado",
       description:
-        'Uma equipe familiar e dedicada, pronta para ouvir suas demandas e explicar tudo sem "contabilês".',
+        "Suporte próximo, claro e direto com quem realmente resolve. Atendimento personalizado para cada cliente.",
       iconColor:
         "bg-purple-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-purple-600",
       icon: <Users size={28} />,
@@ -43,17 +43,19 @@ const Home = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
       <section className="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
-            Excelência Contábil para o <br />{" "}
-            <span className="text-emerald-400">Crescimento do seu Negócio</span>
+          <h1 className="text-3xl md:text-5xl font-bold font-serif mb-6 leading-tight">
+            Terceirização de Folha de Pagamento com
+            <br />{" "}
+            <span className="text-emerald-400">
+              Segurança, Agilidade e Zero Erros
+            </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl">
-            Mais que números, entregamos soluções estratégicas para você focar
-            no que realmente importa: o sucesso da sua empresa.
+            Cuidamos de toda a sua folha para que você foque no crescimento do
+            seu negócio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -72,7 +74,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Value Proposition */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -103,7 +104,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featurette */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative">

@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Mail, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
+import { formatPhone } from "@/src/utils/formatPhone";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   useEffect(() => {
     document.title = "Contabilidade Confiança | Fale Conosco";
   }, []);
@@ -43,9 +44,15 @@ ${formState.message}
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    let value = e.target.value;
+
+    if (e.target.name === "phone") {
+      value = formatPhone(value);
+    }
+
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
   };
 
@@ -63,7 +70,6 @@ ${formState.message}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Info & Map Placeholder */}
           <div className="space-y-10">
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">
@@ -98,7 +104,6 @@ ${formState.message}
             </div>
           </div>
 
-          {/* Form */}
           <div className="bg-slate-50 p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100">
             <h2 className="text-2xl font-bold text-slate-900 mb-8">
               Envie uma Mensagem

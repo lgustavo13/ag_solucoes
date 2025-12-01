@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   UserPlus,
   Banknote,
@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const Services: React.FC = () => {
+const Services = () => {
   useEffect(() => {
     document.title = "Contabilidade Confiança | Serviços";
   }, []);
@@ -161,7 +161,6 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Bottom */}
         <div className="mt-20 bg-emerald-600 rounded-2xl p-10 text-center text-white shadow-2xl">
           <h2 className="text-3xl font-bold font-serif mb-4">
             Não encontrou o que procura?

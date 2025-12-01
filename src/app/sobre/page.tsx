@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <div className="bg-white">
-      {/* Header */}
       <div className="bg-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-serif font-bold mb-4">Sobre Nós</h1>
@@ -20,7 +19,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           <div className="lg:w-1/2 space-y-6 text-slate-600 leading-relaxed text-lg">
@@ -65,7 +63,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Mission/Vision/Values */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-slate-50 p-8 rounded-xl border-t-4 border-emerald-500 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Missão</h3>
@@ -78,13 +75,14 @@ const About = () => {
           <div className="bg-slate-50 p-8 rounded-xl border-t-4 border-blue-500 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Visão</h3>
             <p className="text-slate-600">
-              Ser referência regional em assessoria contábil, reconhecida pela
-              confiabilidade, inovação e qualidade no atendimento.
+              Ser referência regional em terceirização de folha de pagamento,
+              reconhecida pela confiabilidade, inovação e qualidade no
+              atendimento.
             </p>
           </div>
           <div className="bg-slate-50 p-8 rounded-xl border-t-4 border-purple-500 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Valores</h3>
-            <ul className="text-slate-600 list-disc list-inside space-y-2">
+            <ul className="text-slate-600 list-disc list-inside space-y-1">
               <li>Ética Profissional</li>
               <li>Transparência Total</li>
               <li>Comprometimento</li>
