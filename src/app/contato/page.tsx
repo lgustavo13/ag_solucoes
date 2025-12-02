@@ -77,7 +77,7 @@ ${formState.message}
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-full text-emerald-600">
+                  <div className="bg-blue-100 p-3 rounded-full text-company-primary">
                     <Phone size={24} />
                   </div>
                   <div>
@@ -92,7 +92,7 @@ ${formState.message}
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-full text-emerald-600">
+                  <div className="bg-blue-100 p-3 rounded-full text-company-primary">
                     <Mail size={24} />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ ${formState.message}
                   required
                   value={formState.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
                   placeholder="Seu nome"
                 />
               </div>
@@ -147,7 +147,7 @@ ${formState.message}
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -164,7 +164,7 @@ ${formState.message}
                     name="phone"
                     value={formState.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
@@ -184,7 +184,7 @@ ${formState.message}
                   required
                   value={formState.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all resize-none"
                   placeholder="Como podemos ajudar sua empresa?"
                 ></textarea>
               </div>

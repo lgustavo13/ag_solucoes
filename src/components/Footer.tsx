@@ -20,10 +20,9 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Brand Info */}
           <div className="space-y-4">
             <h3 className="text-white text-lg font-bold font-serif">
-              A. G. Soluções
+              A. G. Soluções Administrativas
             </h3>
             <p className="text-sm leading-relaxed text-slate-400">
               Cuidando da saúde financeira da sua empresa com ética,
@@ -34,7 +33,7 @@ const Footer: React.FC = () => {
                 <Link
                   key={index}
                   href={link.href}
-                  className="hover:text-emerald-400 transition-colors"
+                  className="hover:text-company-primary transition-colors"
                 >
                   {link.icon}
                 </Link>
@@ -42,7 +41,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">
               Links Rápidos
@@ -52,7 +50,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="hover:text-emerald-400 transition-colors text-sm"
+                    className="hover:text-company-primary transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -61,16 +59,15 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
-                <Phone size={18} className="text-emerald-500 shrink-0" />
+                <Phone size={18} className="text-company-primary shrink-0" />
                 <span className="text-sm">(19) 99775-5755</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={18} className="text-emerald-500 shrink-0" />
+                <Mail size={18} className="text-company-primary shrink-0" />
                 <span className="text-sm">contato@ag-solucoes.com.br</span>
               </li>
             </ul>
@@ -79,8 +76,8 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} A. G. Soluções. Todos os direitos
-            reservados.
+            &copy; {new Date().getFullYear()} A. G. Soluções Administrativas.
+            Todos os direitos reservados.
           </p>
         </div>
       </div>

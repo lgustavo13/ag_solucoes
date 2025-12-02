@@ -26,10 +26,10 @@ const About = () => {
               Nossa História
             </h2>
             <p>
-              A <strong>A. G. Soluções</strong> nasceu de um sonho e muita
-              dedicação. Fundada pela Contadora Andrea Aleksandra Gonçalves, com
-              o objetivo de oferecer um serviço de terceirização de folha de
-              pagamento.
+              A <strong>A. G. Soluções Administrativas</strong> nasceu de um
+              sonho e muita dedicação. Fundada pela Contadora Andrea Aleksandra
+              Gonçalves, com o objetivo de oferecer um serviço de terceirização
+              de folha de pagamento.
             </p>
             <p>Ao longo dos anos, crescemos junto com nossos clientes.</p>
             <p>
@@ -39,7 +39,7 @@ const About = () => {
               registrada.
             </p>
 
-            <div className="pt-6 border-l-4 border-emerald-500 pl-6 italic text-slate-700 bg-slate-50 py-4 pr-4 rounded-r-lg">
+            <div className="pt-6 border-l-4 border-company-primary pl-6 italic text-slate-700 bg-slate-50 py-4 pr-4 rounded-r-lg">
               &quot;A contabilidade é a linguagem dos negócios, e nós estamos
               aqui para ser o seu tradutor.&quot;
             </div>

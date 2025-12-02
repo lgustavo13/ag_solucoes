@@ -26,16 +26,19 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="shrink-0 flex items-center gap-2">
-              <div className="bg-emerald-600 p-2 rounded-lg text-white">
+              <div className="bg-company-primary p-2 rounded-lg text-white">
                 <Calculator size={24} />
               </div>
               <span className="font-bold text-xl text-slate-800 tracking-tight">
-                A. G.<span className="text-emerald-600"> Soluções</span>
+                A. G.
+                <span className="text-company-primary">
+                  {" "}
+                  Soluções Administrativas
+                </span>
               </span>
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -43,8 +46,8 @@ const Navbar = () => {
                 href={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? "text-emerald-600 border-b-2 border-emerald-600 pb-1"
-                    : "text-slate-600 hover:text-emerald-600"
+                    ? "text-company-primary border-b-2 border-company-primary pb-1"
+                    : "text-slate-600 hover:text-company-primary"
                 }`}
               >
                 {item.name}
@@ -52,18 +55,16 @@ const Navbar = () => {
             ))}
             <Link
               href="/contato"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+              className="bg-company-primary hover:bg-company-primary-foreground text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-company-primary-foreground/25"
             >
               Agendar Consultoria
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <MenuHamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <MenuHamburguerContent
           navigation={navigation}

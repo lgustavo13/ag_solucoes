@@ -49,7 +49,7 @@ const Home = () => {
           <h1 className="text-3xl md:text-5xl font-bold font-serif mb-6 leading-tight">
             Terceirização de Folha de Pagamento com
             <br />{" "}
-            <span className="text-emerald-400">
+            <span className="text-company-primary">
               Segurança, Agilidade e Zero Erros
             </span>
           </h1>
@@ -60,7 +60,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contato"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2 justify-center"
+              className="bg-company-primary hover:bg-company-primary-foreground text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-company-primary-foreground/25 flex items-center gap-2 justify-center"
             >
               Entre em contato <ArrowRight size={20} />
             </Link>
@@ -77,7 +77,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">
+            <span className="text-company-primary font-semibold text-sm tracking-wider uppercase">
               Nossos Diferenciais
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-2 font-serif">
@@ -107,7 +107,7 @@ const Home = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative">
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-emerald-200 rounded-full opacity-50 blur-xl"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gray-200 rounded-full opacity-50 blur-xl"></div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-200 rounded-full opacity-50 blur-xl"></div>
             <Image
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000"
@@ -139,7 +139,7 @@ const Home = () => {
                   key={index}
                   className="flex items-center gap-3 text-slate-700 font-medium"
                 >
-                  <CheckCircle2 className="text-emerald-500" size={20} />
+                  <CheckCircle2 className="text-company-primary" size={20} />
                   {item}
                 </li>
               ))}
@@ -148,7 +148,7 @@ const Home = () => {
             <div className="mt-10">
               <Link
                 href="/servicos"
-                className="text-emerald-700 font-semibold hover:text-emerald-800 flex items-center gap-2"
+                className="text-company-primary font-semibold hover:text-company-primary-foreground flex items-center gap-2"
               >
                 Ver todos os serviços <ArrowRight size={18} />
               </Link>
