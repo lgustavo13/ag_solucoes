@@ -127,6 +127,12 @@ const Home = () => {
               precisa de auditoria, temos a expertise necessária. Simplificamos
               a burocracia para você voar mais alto.
             </p>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+              A gestão da folha de pagamento exige precisão, atualização
+              constante das leis trabalhistas e alto nível de responsabilidade.
+              Ao terceirizar, sua empresa reduz custos, evita erros, ganha tempo
+              e garante conformidade total com a legislação.
+            </p>
 
             <ul className="space-y-4">
               {[
