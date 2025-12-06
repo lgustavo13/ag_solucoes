@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import React from "react";
 
 export const metadata: Metadata = {
   title: "Sobre Nós",
@@ -27,9 +26,9 @@ const About = () => {
             </h2>
             <p>
               A <strong>A. G. Soluções Administrativas</strong> nasceu de um
-              sonho e muita dedicação. Fundada pela Contadora Andrea Aleksandra
-              Gonçalves, com o objetivo de oferecer um serviço de terceirização
-              de folha de pagamento.
+              sonho e muita dedicação. Fundada pela Andrea Aleksandra Gonçalves,
+              com o objetivo de oferecer um serviço de terceirização de folha de
+              pagamento.
             </p>
             <p>Ao longo dos anos, crescemos junto com nossos clientes.</p>
             <p>
@@ -40,8 +39,8 @@ const About = () => {
             </p>
 
             <div className="pt-6 border-l-4 border-company-primary pl-6 italic text-slate-700 bg-slate-50 py-4 pr-4 rounded-r-lg">
-              &quot;A contabilidade é a linguagem dos negócios, e nós estamos
-              aqui para ser o seu tradutor.&quot;
+              &quot;Sua folha de pagamento sem erros, sem atrasos e com total
+              conformidade legal.&quot;
             </div>
           </div>
 
@@ -54,7 +53,7 @@ const About = () => {
               height={1000}
             />
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600"
+              src="/atendendo-cliente.jpg"
               alt="Escritório Moderno"
               className="rounded-2xl shadow-lg w-full h-64 object-cover"
               width={1000}

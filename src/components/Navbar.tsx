@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MenuHamburguer } from "./MenuHamburguer";
 import { MenuHamburguerContent } from "./MenuHamburguerContent";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +26,8 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="shrink-0 flex items-center gap-2">
-              <div className="bg-company-primary p-2 rounded-lg text-white">
-                <Calculator size={24} />
-              </div>
-              <span className="font-bold text-xl text-slate-800 tracking-tight">
+              <Image src="/logo.png" alt="Logo" width={50} height={50} />
+              <span className="font-bold text-xl text-slate-800 tracking-tight max-md:flex max-md:flex-col max-md:text-base">
                 A. G.
                 <span className="text-company-primary">
                   {" "}
