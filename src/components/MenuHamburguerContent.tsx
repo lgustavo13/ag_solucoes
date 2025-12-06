@@ -24,8 +24,8 @@ export const MenuHamburguerContent = ({
             onClick={() => setIsOpen(false)}
             className={`block px-3 py-3 rounded-md text-base font-medium ${
               isActive(item.href)
-                ? "bg-emerald-50 text-emerald-700"
-                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                ? "bg-company-primary text-white"
+                : "text-slate-600 hover:bg-company-primary/85 hover:text-white"
             }`}
           >
             {item.name}
