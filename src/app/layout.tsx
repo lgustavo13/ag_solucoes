@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: "A G Soluções",
     template: "A G Soluções | %s",
   },
-  description: "Website profissional de contabilidade",
+  description: "Site profissional de terceirização de folha de pagamento",
 };
 
 export default function RootLayout({

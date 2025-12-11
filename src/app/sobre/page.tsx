@@ -26,16 +26,19 @@ const About = () => {
             </h2>
             <p>
               A <strong>A. G. Soluções Administrativas</strong> nasceu de um
-              sonho e muita dedicação. Fundada pela Andrea Aleksandra Gonçalves,
-              com o objetivo de oferecer um serviço de terceirização de folha de
-              pagamento.
+              sonho e muita dedicação. Com mais de 20 anos de experiência na
+              área de Departamento Pessoal e Gestão de Folha de Pagamento, nosso
+              escritório foi criado com o propósito de oferecer{" "}
+              <strong>terceirização completa, segura e 100% online.</strong>{" "}
+              Atuamos com tecnologia, expertise e atenção aos detalhes para
+              garantir que sua empresa cumpra todas as obrigações trabalhistas,
+              evitando riscos, retrabalhos e custos desnecessários.
             </p>
-            <p>Ao longo dos anos, crescemos junto com nossos clientes.</p>
             <p>
-              Hoje, combinamos a tradição e a experiência de anos de mercado com
-              as mais modernas ferramentas tecnológicas, garantindo agilidade
-              sem perder o &quot;olho no olho&quot; que sempre foi nossa marca
-              registrada.
+              Somos especialistas em fechamento de folha de pagamento,
+              admissões, rescisões, eSocial, cálculo de encargos e rotinas
+              trabalhistas em geral. Atendemos empresas de todos os portes,
+              entregando um serviço ágil, organizado e totalmente digital.
             </p>
 
             <div className="pt-6 border-l-4 border-company-primary pl-6 italic text-slate-700 bg-slate-50 py-4 pr-4 rounded-r-lg">

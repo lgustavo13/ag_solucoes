@@ -1,61 +1,12 @@
-"use client";
+import { Mail, Phone } from "lucide-react";
+import { Metadata } from "next";
+import { ContactForm } from "@/src/components/ContactForm";
 
-import { useState, useEffect } from "react";
-import { Mail, MessageCircle, Phone } from "lucide-react";
-import { Button } from "@/src/components/ui/button";
-import { formatPhone } from "@/src/utils/formatPhone";
+export const metadata: Metadata = {
+  title: "Fale Conosco",
+};
 
 const Contact = () => {
-  useEffect(() => {
-    document.title = "Contabilidade Confiança | Fale Conosco";
-  }, []);
-
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const companyPhone = "5519997755755";
-
-    const text = `
-*Olá! Vim através do site e gostaria de um atendimento.*
-
-*Nome:* ${formState.name}
-*Email:* ${formState.email}
-*Telefone:* ${formState.phone}
-
-*Mensagem:*
-${formState.message}
-    `.trim();
-
-    const whatsappUrl = `https://wa.me/${companyPhone}?text=${encodeURIComponent(
-      text
-    )}`;
-    window.open(whatsappUrl, "_blank");
-
-    setFormState({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    let value = e.target.value;
-
-    if (e.target.name === "phone") {
-      value = formatPhone(value);
-    }
-
-    setFormState({
-      ...formState,
-      [e.target.name]: value,
-    });
-  };
-
   return (
     <div className="bg-white min-h-screen">
       <div className="bg-slate-900 text-white py-16">
@@ -112,92 +63,8 @@ ${formState.message}
               Preencha os dados abaixo para ser atendido via WhatsApp pelo nosso
               time.
             </p>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-slate-700 mb-2"
-                >
-                  Nome Completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formState.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
-                  placeholder="Seu nome"
-                />
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-slate-700 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formState.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-slate-700 mb-2"
-                  >
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formState.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all"
-                    placeholder="(00) 00000-0000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-slate-700 mb-2"
-                >
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  value={formState.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-company-primary focus:ring-2 focus:ring-company-primary outline-none transition-all resize-none"
-                  placeholder="Como podemos ajudar sua empresa?"
-                ></textarea>
-              </div>
-
-              <Button
-                size="lg"
-                type="submit"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-emerald-500/25 flex items-center justify-center gap-2 hover:cursor-pointer"
-              >
-                <MessageCircle size={20} />
-                Iniciar Conversa no WhatsApp
-              </Button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
