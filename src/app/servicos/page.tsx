@@ -1,122 +1,12 @@
-"use client";
+import { ContactUs } from "@/src/components/ContactUs";
+import { Metadata } from "next";
+import { servicesList } from "@/src/utils/serviceList";
 
-import { useEffect } from "react";
-import {
-  UserPlus,
-  Banknote,
-  Receipt,
-  Calendar,
-  Globe,
-  Home,
-  Store,
-  FileCheck,
-} from "lucide-react";
-import Link from "next/link";
+export const metadata: Metadata = {
+  title: "Serviços",
+};
 
 const Services = () => {
-  useEffect(() => {
-    document.title = "Contabilidade Confiança | Serviços";
-  }, []);
-
-  const servicesList = [
-    {
-      icon: <UserPlus size={32} />,
-      title: "Admissão e Rescisão",
-      description:
-        "Gestão completa da entrada e saída de colaboradores, garantindo documentação correta e cálculos precisos para segurança jurídica",
-      features: [
-        "Contratos de Trabalho",
-        "Cálculo de Verbas Rescisórias",
-        "Registro no eSocial",
-        "Guias e Documentação",
-      ],
-    },
-    {
-      icon: <Calendar size={32} />,
-      title: "Gestão de Férias",
-      description:
-        "Controle rigoroso de períodos aquisitivos e concessivos, com cálculos exatos e programação de escalas para evitar multas.",
-      features: [
-        "Controle de Vencimentos",
-        "Cálculos e Emissão de Recibos",
-        "Gestão de Abono Pecuniário",
-        "Programação de Escalas",
-      ],
-    },
-    {
-      icon: <Globe size={32} />,
-      title: "Elaboração e Envio do eSocial",
-      description:
-        "Monitoramento e transmissão de eventos periódicos, assegurando que sua empresa cumpra as exigências digitais do governo.",
-      features: [
-        "Transmissão de Eventos (Periódicos e Não Periódicos)",
-        "Gestão de DCTFWeb",
-        "Monitoramento de SST (Saúde e Segurança do Trabalho)",
-        "Auditoria de Dados Cadastrais",
-      ],
-    },
-    {
-      icon: <Home size={32} />,
-      title: "Folha de Domésticos",
-      description:
-        "Assessoria especializada para empregadores domésticos, cuidando de toda a burocracia mensal e obrigações trabalhistas.",
-      features: [
-        "Gestão Mensal do eSocial Doméstico",
-        "Cálculos Trabalhistas Complexos",
-        "Recibos de Pagamento (Holerites)",
-        "Férias e 13º Salário",
-      ],
-    },
-    {
-      icon: <Store size={32} />,
-      title: "Assessorias para MEI",
-      description:
-        "Suporte total para o Microempreendedor Individual crescer com segurança, mantendo o CNPJ regular e os impostos em dia.",
-      features: [
-        "Declaração Anual (DASN-SIMEI)",
-        "Controle do Limite de Faturamento",
-        "Emissão de Notas Fiscais",
-        "Regularização e Parcelamento",
-      ],
-    },
-    {
-      icon: <FileCheck size={32} />,
-      title: "Suporte em Obrigações Anuais (DIRF, RAIS, CAGED)",
-      description:
-        "Garantimos a conformidade total com a entrega rigorosa das declarações anuais, cruzando dados para evitar malha fina.",
-      features: [
-        "Elaboração e Envio da DIRF",
-        "Gestão de RAIS (e sua substituição)",
-        "Emissão de Informes de Rendimentos",
-        "Auditoria de Cruzamento de Dados",
-      ],
-    },
-    {
-      icon: <Banknote size={32} />,
-      title: "Fechamento de Folha",
-      description:
-        "Processamento rigoroso da remuneração, assegurando a exatidão dos pagamentos e o cumprimento dos prazos legais.",
-      features: [
-        "Cálculo de Proventos",
-        "Apuração de Horas Extras",
-        "Emissão de Holerites",
-        "Relatórios Gerenciais",
-      ],
-    },
-    {
-      icon: <Receipt size={32} />,
-      title: "Geração de Guias",
-      description:
-        "Gestão completa dos encargos trabalhistas, garantindo que sua empresa recolha os tributos corretamente (INSS, FGTS, IRRF).",
-      features: [
-        "DARF Previdenciário",
-        "FGTS Digital",
-        "Retenção de IRRF",
-        "Controle de Vencimentos",
-      ],
-    },
-  ];
-
   return (
     <div className="bg-slate-50 min-h-screen">
       <div className="bg-slate-900 text-white py-16">
@@ -161,21 +51,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-company-primary rounded-2xl p-10 text-center text-white shadow-2xl">
-          <h2 className="text-3xl font-bold font-serif mb-4">
-            Não encontrou o que procura?
-          </h2>
-          <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco. Desenvolvemos soluções personalizadas de
-            acordo com a necessidade do seu negócio.
-          </p>
-          <Link
-            href="/contato"
-            className="inline-block bg-white text-company-primary font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors shadow-md"
-          >
-            Fale Conosco Agora
-          </Link>
-        </div>
+        <ContactUs />
       </div>
     </div>
   );
