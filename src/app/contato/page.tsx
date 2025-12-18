@@ -1,6 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Metadata } from "next";
 import { ContactForm } from "@/src/components/ContactForm";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Fale Conosco",
@@ -48,7 +49,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Email</p>
-                    <p className="text-slate-600">contato@ag-solucoes.com.br</p>
+                    <Link
+                      href="mailto:diretoria@agsolucoesadm.com.br"
+                      className="text-slate-600 hover:text-company-primary transition-colors"
+                    >
+                      diretoria@agsolucoesadm.com.br
+                    </Link>
                   </div>
                 </div>
               </div>
