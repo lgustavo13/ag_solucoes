@@ -4,6 +4,7 @@ import {
   FileCheck,
   Globe,
   Home,
+  Landmark,
   Receipt,
   Store,
   UserPlus,
@@ -104,6 +105,18 @@ export const servicesList = [
       "FGTS Digital",
       "Retenção de IRRF",
       "Controle de Vencimentos",
+    ],
+  },
+  {
+    icon: <Landmark size={32} />,
+    title: "BPO Financeiro",
+    description:
+      "Assumimos rotinas de contas e faturamento com tecnologia e dados precisos. Libere seu tempo para focar no crescimento estratégico do seu negócio.",
+    features: [
+      "Gestão de Contas a Pagar e Receber",
+      "Conciliação Bancária Diária",
+      "Emissão de Notas Fiscais e Faturamento",
+      "Relatórios de Fluxo de Caixa e DRE",
     ],
   },
 ];
