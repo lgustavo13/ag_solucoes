@@ -12,8 +12,8 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-serif font-bold mb-4">Sobre Nós</h1>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Conheça a história por trás da A. G. Soluções e nossa missão de
-            transformar números em oportunidades.
+            Conheça a história por trás da A. G. Soluções Administrativas e
+            nossa missão de transformar números em oportunidades.
           </p>
         </div>
       </div>
@@ -47,18 +47,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 grid grid-cols-2 gap-4">
+          <div className="lg:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
+              src="/fundadora.jpeg"
               alt="Fundadora"
-              className="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8"
-              width={1000}
-              height={1000}
-            />
-            <Image
-              src="/atendendo-cliente.jpg"
-              alt="Escritório Moderno"
-              className="rounded-2xl shadow-lg w-full h-64 object-cover"
+              className="rounded-2xl shadow-lg w-full h-full object-cover transform translate-y-8"
               width={1000}
               height={1000}
             />
